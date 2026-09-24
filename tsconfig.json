@@ -1,0 +1,95 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "ES2022",
+    "module": "preserve",
+    "paths": {
+      "@spartan-ng/helm/utils": [
+        "./src/app/libs/utils/src/index.ts"
+      ],
+      "@spartan-ng/helm/button": [
+        "./src/app/libs/button/src/index.ts"
+      ],
+      "@spartan-ng/helm/card": [
+        "./src/app/libs/card/src/index.ts"
+      ],
+      "@spartan-ng/helm/badge": [
+        "./src/app/libs/badge/src/index.ts"
+      ],
+      "@spartan-ng/helm/field": [
+        "./src/app/libs/field/src/index.ts"
+      ],
+      "@spartan-ng/helm/label": [
+        "./src/app/libs/label/src/index.ts"
+      ],
+      "@spartan-ng/helm/separator": [
+        "./src/app/libs/separator/src/index.ts"
+      ],
+      "@spartan-ng/helm/input": [
+        "./src/app/libs/input/src/index.ts"
+      ],
+      "@spartan-ng/helm/select": [
+        "./src/app/libs/select/src/index.ts"
+      ],
+      "@spartan-ng/helm/switch": [
+        "./src/app/libs/switch/src/index.ts"
+      ],
+      "@spartan-ng/helm/accordion": [
+        "./src/app/libs/accordion/src/index.ts"
+      ],
+      "@spartan-ng/helm/tooltip": [
+        "./src/app/libs/tooltip/src/index.ts"
+      ],
+      "@spartan-ng/helm/sidebar": [
+        "./src/app/libs/sidebar/src/index.ts"
+      ],
+      "@spartan-ng/helm/sheet": [
+        "./src/app/libs/sheet/src/index.ts"
+      ],
+      "@spartan-ng/helm/skeleton": [
+        "./src/app/libs/skeleton/src/index.ts"
+      ],
+      "@spartan-ng/helm/alert": [
+        "./src/app/libs/alert/src/index.ts"
+      ],
+      "@spartan-ng/helm/table": [
+        "./src/app/libs/table/src/index.ts"
+      ],
+      "@spartan-ng/helm/collapsible": [
+        "./src/app/libs/collapsible/src/index.ts"
+      ],
+      "@spartan-ng/helm/checkbox": [
+        "./src/app/libs/checkbox/src/index.ts"
+      ],
+      "@core/*": [
+        "./src/app/core/*"
+      ],
+      "@shared/*": [
+        "./src/app/shared/*"
+      ]
+    }
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true
+  },
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.spec.json"
+    }
+  ]
+}

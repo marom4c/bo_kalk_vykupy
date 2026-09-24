@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="cs" class="h-full">
+  <head>
+    <meta charset="utf-8" />
+    <title>Kalkulačka výkupu BO! reality</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <script>
+      // Apply the stored theme before first paint to avoid a flash of the wrong theme.
+      (function () {
+        try {
+          var t = localStorage.getItem('theme-preference');
+          var dark = t === 'dark' || (t !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+          if (dark) document.documentElement.classList.add('dark');
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="h-full">
+    <bo-root></bo-root>
+  </body>
+</html>
