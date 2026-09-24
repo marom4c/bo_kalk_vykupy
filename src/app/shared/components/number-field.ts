@@ -16,16 +16,18 @@ import { HlmTooltipImports } from '@spartan-ng/helm/tooltip';
   providers: [provideIcons({ lucideInfo })],
   template: `
     <hlm-field [forceInvalid]="!!error()">
-      <hlm-field-label [for]="inputId()" class="flex items-center gap-1.5">
-        <span>{{ label() }}</span>
-        @if (tooltip()) {
-          <ng-icon
-            name="lucideInfo"
-            class="text-muted-foreground text-[length:--spacing(3.5)]"
-            [hlmTooltip]="tooltip()!"
-            aria-hidden="true"
-          />
-        }
+      <hlm-field-label [for]="inputId()" class="flex items-end sm:min-h-10">
+        <span>
+          {{ label() }}
+          @if (tooltip()) {
+            <ng-icon
+              name="lucideInfo"
+              class="text-muted-foreground ms-1 inline-block align-[-2px] text-[length:--spacing(3.5)]"
+              [hlmTooltip]="tooltip()!"
+              aria-hidden="true"
+            />
+          }
+        </span>
       </hlm-field-label>
       <div class="relative">
         <input

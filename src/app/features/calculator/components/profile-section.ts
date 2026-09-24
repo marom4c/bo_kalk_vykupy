@@ -29,17 +29,19 @@ import { CalculatorStore } from '../state/calculator-store';
           V prototypu jsou hodnoty editovatelné. V budoucí integraci budou načteny z API nebo uživatelského profilu.
         </p>
       </div>
-      <div hlmCardContent class="grid gap-5 sm:grid-cols-2">
+      <div hlmCardContent class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
         <hlm-field [forceInvalid]="!!error('branchPosition')">
-          <hlm-field-label for="branchPosition" class="flex items-center gap-1.5">
-            <span>Pozice pobočky dle kariéry výkupů</span>
-            <ng-icon
-              name="lucideInfo"
-              class="text-muted-foreground text-[length:--spacing(3.5)]"
-              [hlmTooltip]="positionTable"
-              aria-label="Tabulka pozic pobočky"
-              tabindex="0"
-            />
+          <hlm-field-label for="branchPosition" class="flex items-end sm:min-h-10">
+            <span>
+              Pozice pobočky dle kariéry výkupů
+              <ng-icon
+                name="lucideInfo"
+                class="text-muted-foreground ms-1 inline-block align-[-2px] text-[length:--spacing(3.5)]"
+                [hlmTooltip]="positionTable"
+                aria-label="Tabulka pozic pobočky"
+                tabindex="0"
+              />
+            </span>
           </hlm-field-label>
           <hlm-select [value]="store.values().branchPosition" (valueChange)="setPosition($event)">
             <hlm-select-trigger buttonId="branchPosition" class="w-full">
@@ -75,6 +77,16 @@ import { CalculatorStore } from '../state/calculator-store';
           (valueChange)="store.update('brokerCommissionRatePct', $event)"
           (blurred)="store.touch('brokerCommissionRatePct')"
         />
+
+        <div
+          class="bg-muted/40 text-muted-foreground flex items-start gap-2 rounded-lg border p-3 text-xs md:col-span-2 xl:col-span-1"
+        >
+          <ng-icon name="lucidePlug" class="mt-0.5 shrink-0" aria-hidden="true" />
+          <p>
+            Tyto hodnoty jsou společné pro oba scénáře a určují cenu peněz (efektivita <em>e</em>) i rozdělení zisku (podíl
+            <em>p</em>). Po napojení na systém budou předvyplněné a jen pro čtení.
+          </p>
+        </div>
       </div>
     </section>
 

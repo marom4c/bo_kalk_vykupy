@@ -68,14 +68,8 @@ import { CalculatorStore } from './state/calculator-store';
       </header>
 
       <!-- 3 + 4 + 5: Vstupy -->
-      <div class="grid gap-6 xl:grid-cols-3">
-        <div class="xl:col-span-1">
-          <bo-profile-section />
-        </div>
-        <div class="xl:col-span-2">
-          <bo-deal-form />
-        </div>
-      </div>
+      <bo-profile-section />
+      <bo-deal-form />
 
       <!-- Upozornění -->
       @if (store.isValid() && store.warningSummary().length > 0) {
@@ -100,7 +94,7 @@ import { CalculatorStore } from './state/calculator-store';
 
       <!-- 6 + 7: Výsledky -->
       @if (store.result(); as result) {
-        <div class="grid gap-6 lg:grid-cols-2">
+        <div class="grid gap-6 @4xl/main:grid-cols-2">
           <bo-scenario-card [result]="result" [scenario]="result.guaranteed" />
           <bo-scenario-card [result]="result" [scenario]="result.market" />
         </div>

@@ -51,7 +51,7 @@ import { buildScenarioSections, ResultRow, scenarioSubtitle, scenarioTitle } fro
       <div hlmCardContent class="flex flex-col gap-4">
         <!-- Verdikt -->
         <div
-          class="flex items-center justify-between gap-3 rounded-lg border px-4 py-3"
+          class="flex flex-wrap items-center justify-between gap-x-4 gap-y-2 rounded-lg border px-4 py-3"
           [class]="
             scenario().passes
               ? 'border-success/40 bg-success/10 text-green-800 dark:text-green-300'
@@ -72,7 +72,7 @@ import { buildScenarioSections, ResultRow, scenarioSubtitle, scenarioTitle } fro
               }}</span>
             </div>
           </div>
-          <div class="text-end">
+          <div class="ms-auto text-end">
             <div class="text-2xl font-bold tabular-nums tracking-tight" [class.text-3xl]="isGuaranteed()">
               {{ totalProfit() }}
             </div>
