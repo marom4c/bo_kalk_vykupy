@@ -36,14 +36,14 @@ import { RULES_VERSION } from '@core/calc';
               <a hlmSidebarMenuButton size="lg" routerLink="/">
                 <img
                   class="me-2 aspect-square size-8 dark:hidden"
-                  src="/images/logo/logo.svg"
+                  src="images/logo/logo.svg"
                   width="32"
                   height="32"
                   alt=""
                 />
                 <img
                   class="me-2 hidden aspect-square size-8 dark:inline-block"
-                  src="/images/logo/logo-white.svg"
+                  src="images/logo/logo-white.svg"
                   width="32"
                   height="32"
                   alt=""
